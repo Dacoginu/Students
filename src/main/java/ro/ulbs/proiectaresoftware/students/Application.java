@@ -16,7 +16,9 @@ public class Application {
 
     Student s =new Student(120, "Alis", "Popa", "TI21/2");
 
- if(boolean exista =students.contains(s)!=0)
+ if(boolean exista if (students.contains(s) != 0)
+
+
 
 
 

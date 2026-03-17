@@ -48,4 +48,5 @@ return numarMatricol == student.numarMatricol && prenume.equals(student.prenume)
     public int hashCode() {
         return Objects.hash(numarMatricol, prenume, nume, formatieDeStudiu);
     }
+
 }
