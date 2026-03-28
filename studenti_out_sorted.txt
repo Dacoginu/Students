@@ -1,0 +1,7 @@
+numar matricol         prenume         nume formatieDeStudiu  nota
+          1024            Ioan Mihalcea     ISM141/1      0.00
+          1025          Andrei Popa         ISM141/2      0.00
+          1029          Bianca Popescu      TI131/1       0.00
+          1026        Anamaria Prodan       TI131/1       0.00
+          1028           Mihai Ionescu      TI132/1       0.00
+          1027            Paul Mohanu       TI132/1       0.00
