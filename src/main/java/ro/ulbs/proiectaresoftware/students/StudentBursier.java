@@ -3,11 +3,10 @@ package ro.ulbs.proiectaresoftware.students;
 import java.util.Objects;
 
 public class StudentBursier extends Student {
-    private double cuantumBursa;
+    private final double cuantumBursa;
 
     public StudentBursier(int numarMatricol, String prenume, String nume, String formatieDeStudiu, double nota, double bursa) {
-        super(numarMatricol, prenume, nume, formatieDeStudiu);
-        this.setNota((float) nota);
+        super(numarMatricol, prenume, nume, formatieDeStudiu, (float) nota);
         this.cuantumBursa = bursa;
     }
 
