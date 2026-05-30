@@ -27,11 +27,25 @@ public class Student {
     }
 
     // Doar Getters, FARA Setters
-    public int getNumarMatricol() { return numarMatricol; }
-    public String getPrenume() { return prenume; }
-    public String getNume() { return nume; }
-    public String getFormatieDeStudiu() { return formatieDeStudiu; }
-    public float getNota() { return nota; }
+    public int getNumarMatricol() {
+        return numarMatricol;
+    }
+
+    public String getPrenume() {
+        return prenume;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public String getFormatieDeStudiu() {
+        return formatieDeStudiu;
+    }
+
+    public float getNota() {
+        return nota;
+    }
 
     @Override
     public String toString() {
@@ -43,11 +57,14 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return numarMatricol == student.numarMatricol;
+        return numarMatricol == student.numarMatricol &&
+                Objects.equals(prenume, student.prenume) &&
+                Objects.equals(nume, student.nume) &&
+                Objects.equals(formatieDeStudiu, student.formatieDeStudiu);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numarMatricol);
+        return Objects.hash(numarMatricol, prenume, nume, formatieDeStudiu);
     }
 }

@@ -16,12 +16,19 @@ class AplicatieCuBursaTest {
     @Test
     void sortTest1() {
         List<StudentBursier> lista = app.genereaza();
-
         app.sorteaza(lista);
-
-        assertTrue(lista.get(0).getFormatieDeStudiu().compareTo(lista.get(1).getFormatieDeStudiu()) <= 0);
 
         assertFalse(lista.isEmpty());
         assertEquals(4, lista.size());
+
+        // Verificam pentru TOATE elementele din lista (Lab 6.8.3)
+        for (int i = 0; i < lista.size() - 1; i++) {
+            StudentBursier curent = lista.get(i);
+            StudentBursier urmator = lista.get(i + 1);
+
+            // Verificam ca formatia de studiu curenta e <= formatia de studiu a urmatorului
+            assertTrue(curent.getFormatieDeStudiu().compareTo(urmator.getFormatieDeStudiu()) <= 0,
+                    "Lista nu este sortata corect la indexul " + i);
+        }
     }
 }
